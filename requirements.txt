@@ -1,0 +1,7 @@
+flask
+pinecone-client
+pandas
+numpy
+tqdm
+transformers
+torch

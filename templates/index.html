@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Semantic Search</title>
+  <style>
+   body {
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+  color: #000;
+  text-align: center;
+}
+
+form {
+  width: 200px;
+  margin: 0 auto;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+.submit{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #000;
+}
+input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #000;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <h1>Semantic Search</h1>
+  <form action="/" method="post">
+    <input type="text" name="query" placeholder="Enter your query">
+    <br>
+    <input class="submit" type="submit" value="Search">
+  </form>
+  <h3>Query: {{ query }}</h3>
+  <ul>
+    {% for result in result %}
+      <li>
+        <h4>{{ result.text }}</h4>
+        <p>{{ result.score }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

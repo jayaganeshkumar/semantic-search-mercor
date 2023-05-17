@@ -33,7 +33,7 @@ This will create an index in Pinecone and store the vectors of the documents in 
 2. Run the following command to start the application:
 
 ```
-python app.py
+python main.py
 ```
 
 The application will be running on port 5000. You can access it by visiting `http://localhost:5000` in your web browser.
